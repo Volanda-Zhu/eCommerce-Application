@@ -94,12 +94,6 @@ class _ShListState extends State<ShList> {
 
   Future showData() async {
     await helper.openDb();
-//    ShoppingList list = ShoppingList(0, 'Bakery', 2);
-//    int listId = await helper.insertList(list);
-//    ListItem item = ListItem(0, listId, 'Bread', '1 kg', 'note');
-//    int itemId = await helper.insertItem(item);
-//    print('List Id: ' + listId.toString());
-//    print('Item Id: ' + itemId.toString());
     shoppingList = await helper.getLists();
     setState(() {
       shoppingList = shoppingList;
